@@ -31,3 +31,12 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.btn-primary {
+  @apply bg-blue-900 font-semibold hover:bg-blue-950 hover:font-bold px-4 py-2 transition-all rounded-sm
+}
+
+.btn-secondary {
+  @apply bg-red-800 font-semibold hover:bg-red-900 hover:font-bold px-4 py-2 transition-all rounded-sm
+}
