@@ -1,0 +1,8 @@
+**/.env
+**/.dockerignore
+**/.gitignore
+**/.git
+**/node_modules
+**/.next
+**/.vscode
+

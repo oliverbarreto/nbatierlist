@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  web:
+    image: nbatierlist
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # env_file:
+    #   - ./web/.env.local
+    ports:
+      - 3002:3000
