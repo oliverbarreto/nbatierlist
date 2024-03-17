@@ -1,6 +1,9 @@
-import { Team, useTierlistStore } from '@/store/store'
 import Image from 'next/image'
 import React, { useEffect } from 'react'
+
+import { useTierlistStore } from '@/store/store'
+import { Team } from '@/interfaces/TeamInterface'
+
 
 export default function TeamView({
     team
@@ -9,22 +12,11 @@ export default function TeamView({
   }) {
 
     const dragTeam = useTierlistStore(state => state.dragItem)
-
-    // const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
-    //   e.preventDefault();
-    //   console.log("Dragging item:", team.id);
-    //   dragTeam(team.id);
-    // };
     const handleDragStart = (e: React.DragEvent<HTMLDivElement>) => {
       e.dataTransfer.setData('text/plain', team.id); // Set the data payload
       dragTeam(team.id);
     };
   
-    // const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    //   e.preventDefault();
-    //   console.log("Clicked on item:", team.id);
-    // };
-
     // --- Server Side Rehydration with LocalStorage Store Component ---
     // hydrate persisted store after on mount
     useEffect(() => {
@@ -44,16 +36,8 @@ export default function TeamView({
             width="0" 
             height="0"
             sizes="100vw"
-            className="cursor-move h-auto w-auto"
+            className="cursor-move h-auto w-auto min-h-[60px] max-h-[150px]"
         />
-        {/* <Image
-            id={team.id}
-            alt={team.fullName}
-            src={`/images/logo-${team.name}.svg`} 
-            width={75} 
-            height={75}
-            className="cursor-move"
-        /> */}
 
     </div>
   )

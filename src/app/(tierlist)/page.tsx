@@ -8,6 +8,5 @@ export default function Home() {
       <TierHeader title="NBA Teams Tier List"/>
       <TierBoard />
     </main>
-
   );
 }

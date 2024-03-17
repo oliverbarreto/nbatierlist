@@ -23,7 +23,7 @@ export default function TierHeader(
         height={60}
         className=""
       />
-      <h1 className={`${titleFont.className} text-4xl text-center text-white`}>{ title }</h1>
+      <h1 className={`${titleFont.className} text-2xl md:text-4xl text-center text-white`}>{ title }</h1>
     </div>
 
 
