@@ -69,7 +69,7 @@ function TierBoard() {
         <TierRow  title="Tier D" tier="TierD"/>
         <TierRow  title="Tier E" tier="TierE"/>
         <TierRow  title="Tier F" tier="TierF"/>
-        <TierRow  title="All Teams" tier="None"/>
+        <TierRow  title="Teams" tier="None"/>
       </div>
       <div className='flex flex-col justify-center items-center text-center gap-1 lg:gap-2'>
           <button 

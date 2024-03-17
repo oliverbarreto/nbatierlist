@@ -90,7 +90,7 @@ export default function TierRow({
       onDrop={handleDroppedItem} 
       onDragOver={e => e.preventDefault()}
       >
-        <p className='text-white text-lg md:text-xl lg:text-3xl text-center px-4 bg-transparent my-3'>All teams</p>
+        <p className='text-white text-lg md:text-xl lg:text-3xl text-center px-4 bg-transparent my-3'>{title}</p>
         <div id="row_goat" className={`w-full px-2 min-h-[10px] grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 xl:grid-cols-12 text-primary-black`} >       
           { filteredTeams.map(team => (
             <TeamView key={ team.id } team={ team } />
