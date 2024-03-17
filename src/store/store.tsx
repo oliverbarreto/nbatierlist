@@ -18,6 +18,10 @@ const initialTierRowTitles = (): TierRowTitle[] =>  {
         }
     })
   }
+const noItemsMoved = (): boolean => { 
+
+    return true
+}
 
 
 export const useTierlistStore = create<State & Actions>()(

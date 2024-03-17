@@ -56,7 +56,7 @@ export default function TierRow({
  return (
   <>
     { (tier !== "None")  ?
-        <div className={`flex flex-row justify-start items-stretch gap-1 md:gap-5 w-full rounded-lg border-2 border-primary-purple overflow-hidden bg-primary-yellow `} 
+        <div className={`flex flex-row justify-start items-stretch gap-1 md:gap-5 w-full min-h-[80px] rounded-lg border-2 border-primary-purple overflow-hidden bg-primary-yellow `} 
         onDrop={handleDroppedItem} 
         onDragOver={e => e.preventDefault()}
         >
@@ -73,7 +73,7 @@ export default function TierRow({
           >
               
           <textarea  // Cambiamos el input por un textarea
-              className="text-lg lg:text-xl text-center px-4 bg-transparent min-w-[150px] max-w-[200px] h-full resize-none" // Añadimos la clase h-full y resize-none
+              className="text-md lg:text-xl text-center px-4 bg-transparent min-w-[150px] max-w-[2min-h00px] h-full resize-none" // Añadimos la clase h-full y resize-none
               value={mitierRowTitle}
               onChange={handleTitleChange}
           />

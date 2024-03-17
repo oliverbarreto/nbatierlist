@@ -31,12 +31,12 @@ export default function TeamView({
       // onClick={handleClick}
     >
         <Image
+            className="cursor-move h-auto w-auto min-h-[60px] max-h-[150px] hover:scale-105 transition-all duration-100"
             alt={team.fullName}
             src={`/images/logo-${team.name}.svg`} 
             width="0" 
             height="0"
             sizes="100vw"
-            className="cursor-move h-auto w-auto min-h-[60px] max-h-[150px]"
         />
 
     </div>
