@@ -15,7 +15,7 @@ export default function TierHeader(
 
 
   return (
-    <div className="flex flex-row justify-center items-center pt-10 gap-5 ">
+    <div className="flex flex-row justify-center items-center pt-10 gap-5 mb-10">
       <Image
         alt="NBA"
         src={`/images/logo-nba.svg`} 
