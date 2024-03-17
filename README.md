@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+  <a href="https://oliverbarreto.com">
+    <img src="https://www.oliverbarreto.com/images/site-logo.png" />
+  </a>
+</div>
+<div align="center">
+  <h1>NBA Tier List</h1>
+  <strong>If you like NBA Basketball, rank your NBA teams and share it with your friends </strong>
+</div>
+<br>
 
-## Getting Started
+# NBA Tier List
 
-First, run the development server:
+Tier Lists are common nowadays to rank different types of things: artists, songs, product lines or teams. So in order to familiarize with [NextJS 14](https://vercel.com/solutions/nextjs) and [Zustand](https://zustand-demo.pmnd.rs/) state library, let's build a Tier List to rank NBA Teams.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The app allows creating a rank from among all NBA Teams in up to 7 tiers, it allows to change the name of the tier, reset rankings, and even create an image of your "Tier List" to share it with your friends.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Created with ❤️ by Oliver Barreto
 
-## Learn More
+## Technology Stack
 
-To learn more about Next.js, take a look at the following resources:
+This time I will only use the front end and grab some images from public NBA API. The app is deployed in [nbatier.oliverbarreto.com](nbatier.oliverbarreto.com).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- NextJS 14 with App Router (https://nextjs.org/learn/dashboard-app/getting-started)
+- ESLint (https://eslint.org/)
+- TailwindCSS (https://tailwindcss.com/)
+- Zustand (https://zustand-demo.pmnd.rs/) to store App State instead of React Context, Redux... after this experiment, Zustand seems to be very easy to work with.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Otros Recursos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Dotfiles](https://github.com/oliverbarreto/.dotfiles) - Mi configuración personal para macOS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Homelab](https://github.com/oliverbarreto/homelab) - Configuración y documentación de mi HomeLab de infraestructura, networking, aplicaciones, etc.
+
+- [Boilerplates]() - Templates de distintos tipos (docker, html, iOS, React, Python, etc.)
