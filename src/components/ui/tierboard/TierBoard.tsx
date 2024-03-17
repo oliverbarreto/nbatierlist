@@ -17,19 +17,6 @@ function TierBoard() {
 
   // Handle HTML-to-IMAGE
   const elementRef = useRef(null);
-  // const htmlToImageConvert = () => {
-  //   toPng(elementRef.current, { cacheBust: false })
-  //     .then((dataUrl) => {
-  //       const link = document.createElement("a");
-  //       link.download = `${tierName}.png`;
-  //       // link.download = "my-image-name.png";
-  //       link.href = dataUrl;
-  //       link.click();
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
   const htmlToImageConvert = () => {
     if (elementRef.current) {
       toPng(elementRef.current, { cacheBust: false })
@@ -52,8 +39,8 @@ function TierBoard() {
     console.log("reset")
     handleReset()
   }
+  const teams = useTierlistStore(state => state.items)
   const shouldEnableReset = () : boolean => {
-    const teams = useTierlistStore(state => state.items)
     const filtered = teams.filter(team => team.tier !== "None");
     return filtered.length !== 0;
   }
