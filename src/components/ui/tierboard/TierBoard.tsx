@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import { toPng } from 'html-to-image';
 
@@ -17,18 +17,33 @@ function TierBoard() {
 
   // Handle HTML-to-IMAGE
   const elementRef = useRef(null);
+  // const htmlToImageConvert = () => {
+  //   toPng(elementRef.current, { cacheBust: false })
+  //     .then((dataUrl) => {
+  //       const link = document.createElement("a");
+  //       link.download = `${tierName}.png`;
+  //       // link.download = "my-image-name.png";
+  //       link.href = dataUrl;
+  //       link.click();
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // };
   const htmlToImageConvert = () => {
-    toPng(elementRef.current, { cacheBust: false })
+    if (elementRef.current) {
+      toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.download = `${tierName}.png`;
-        // link.download = "my-image-name.png";
         link.href = dataUrl;
         link.click();
       })
       .catch((err) => {
         console.log(err);
       });
+    }
+    
   };
 
   // Handle Reset Button

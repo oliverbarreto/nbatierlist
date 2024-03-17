@@ -1,5 +1,5 @@
+import { Team } from "@/interfaces/TeamInterface"
 import { v4 as uuid } from "uuid"
-import { Team } from "@/store/store"
 
 export const allNBATeams: Team[] = [
   {
